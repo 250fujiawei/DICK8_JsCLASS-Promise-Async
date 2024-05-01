@@ -1,0 +1,48 @@
+js 环境 
+1.新建文件夹
+2.拖拽进vscode
+3.yarn create vite ＋想要的名字（不是文件夹名字）
+4.code 想要名字
+
+进入到编辑页面
+1.counter，js.svg 删除
+2.main js 只保留最上面的import
+3.style.css改成scss
+4.index.html 里面  <title>Vite App</title>里面内容改成想要的
+5.style.css 改成scss 然后里面内容全删
+
+装sass
+yarn add -D sass
+
+测试sass安装成功
+1.index.html 里面<h1>Hello world</h1>
+2.yarn dev
+
+后端启动
+1.新建一个 server.js 本质和main.js相同
+2.在package.json里"scripts":{ 下，新建 "server": "node server.js" 
+此时报错 ，因为要在上一个 结束后加，
+
+检查server.js
+1.在server.js里面加console.log('hello world');
+2.yarn server
+3.显示出hello workld 在控制台
+
+想要不停的执行
+1. yarn add nodemon
+2.package.json里"scripts":{ 下， "server": "node server.js"
+把node 改成nodemon
+3.此时再 yarn server就可以发现已经改变了
+
+此时启动前端 
+1.开启控制台分支 yarn dev
+2.在main.js里面控制前端 console.log(3);
+3.（想要分离前端控制台？控制台的 右上角三点 （停靠位置
+
+想要两个一起跑
+1.不要server.js了
+2.在main里面// import './style.scss' 注释掉
+3..package.json里 改成 nodemon main.js
+4. 重新yarn server
+
+（ctrl+D 同时改相同的东西）
